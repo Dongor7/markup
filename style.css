@@ -1,0 +1,121 @@
+@font-face {
+    font-family: Lato Medium;
+    src: url("./fonts/Lato-Medium.ttf");
+}
+
+@font-face {
+    font-family: Lato Bold;
+    src: url("./fonts/Lato-Bold.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+}
+
+header {
+    color: #ffffff;
+    background: url("./img/Header BG.png") no-repeat 100%;
+}
+
+header > .wrapper {
+    height: 944px;
+    width: 1200px;
+    margin: 0 auto;
+    grid-template-rows: 90px auto;
+}
+
+header nav {
+    border-bottom: 1px solid #2E2E30;
+    grid-template-columns: 133px auto;
+}
+
+header nav > .logo {
+    align-self: center;
+}
+
+header nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    font-family: Lato Medium, sans-serif;
+}
+
+header nav > ul > li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: 72px;
+}
+
+header nav > ul > li:hover {
+    border-bottom: 1px solid #ffffff;
+    cursor: pointer;
+}
+
+header .title {
+    margin: 0 auto;
+    align-items: center;
+}
+
+header .title  h1 {
+    font-size: 72px;
+    font-family: Myriad Pro, sans-serif;
+    font-style: normal;
+}
+
+header .title > div {
+    text-align: center;
+    font-size: 32px;
+    font-family: Georgia, sans-serif;
+    font-style: italic;
+}
+
+header > .login {
+    display: flex;
+    height: 100px;
+    background: #2fac6c;
+    font-family: Lato Medium, sans-serif;
+}
+
+header > .login > div {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+}
+
+header > .login > .sign-in {
+    width: 810px;
+    height: 100%;
+    background: url("./img/Login BG.png") no-repeat;
+    padding-left: 471px;
+}
+
+header > .login > .sign-up {
+    padding-left: 242px;
+}
+
+header > .login span {
+    position: relative;
+    bottom: 0;
+    transition: all 0.1s;
+}
+
+header > .login > .sign-in > span:hover,
+header > .login > .sign-up > span:hover {
+    cursor: pointer;
+    bottom: 5px;
+}
+
