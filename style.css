@@ -72,18 +72,25 @@ header nav > ul {
 }
 
 header nav > ul > li {
+    position: relative;
     display: flex;
     align-items: center;
     list-style: none;
     margin-left: 72px;
-    position: relative;
-    height: calc(100% + 1px);
+    height: 100%;
 }
 
 header nav > ul > li:hover {
+    cursor: pointer;
+}
+
+header nav > ul > li:hover:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
     border-bottom: 1px solid #ffffff;
     border-top: 1px solid transparent;
-    cursor: pointer;
 }
 
 header .title {
@@ -174,6 +181,7 @@ main > .domains > form > * {
     display: flex;
     margin: 8px 0;
     padding: 0 15px;
+    font-size: 15px;
 }
 
 main > .domains > form > *:nth-child(1) {
@@ -190,6 +198,16 @@ main > .domains > form .want {
     align-self: center;
 }
 
+main > .domains > form .www {
+    color: #D9D9D9;
+    font-family: "Lato Regular", sans-serif;
+}
+
+main > .domains > form .want {
+    color: #868686;
+    font-family: "Lato Semibold", sans-serif;
+}
+
 main > .domains > form [name=domains] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -200,6 +218,42 @@ main > .domains > form [name=domains] {
     background-position-y: 13px;
     border: none;
     padding-right: calc(15px + 8px);
+    color: #D9D9D9;
+    font-family: "Lato Regular", sans-serif;
+}
 
+main > .domains > .domains-list {
+    display: grid;
+    grid-template: 1fr 1fr / repeat(4, 1fr);
+    border: 1px solid #D9D9D9;
+    padding: 10px 15px;
+    height: 194px;
+    margin-bottom: 91px;
+}
+
+main > .domains > .domains-list > div {
+    position: relative;
+    display: grid;
+    align-items: center;
+    font-family: "Lato Regular", sans-serif;
+    font-size: 14px;
+    color: #D9D9D9;
+}
+
+main > .domains > .domains-list > div:not(:nth-child(4n)):before {
+    position: absolute;
+    content: '';
+    height: 73px;
+    right: 0;
+    border-right: 1px solid #D9D9D9;
+}
+
+main > .domains > .domains-list > div:nth-child(1n + 5):after {
+    position: absolute;
+    content: '';
+    width: 199px;
+    top: 0;
+    left: 7px;
+    border-top: 1px solid #D9D9D9;
 }
 
